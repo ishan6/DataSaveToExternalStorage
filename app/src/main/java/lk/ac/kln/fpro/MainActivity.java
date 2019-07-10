@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button1, button2;
+    Button button1, button2, button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +18,22 @@ public class MainActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+        button4 = findViewById(R.id.button4);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ExternalStorage.class);
+                startActivity(intent);
+            }
+        });
+
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SharedPreperence.class);
                 startActivity(intent);
             }
         });

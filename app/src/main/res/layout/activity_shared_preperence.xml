@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExternalStorage"
+    tools:context=".SharedPreperence"
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/textotsave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textToSave"
-        android:hint="Type a word to Save"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"/>
+        android:hint="Enter word to Save"/>
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="@string/save"
         android:id="@+id/save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="save"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
+    <TextView
+        android:id="@+id/showText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Saved text here"/>
+
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/show"
         android:id="@+id/show"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="show"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
-
-    <EditText
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textToGet"
-        android:hint="Saved Text"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go Back"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:text="Go to Next Activity"
+        android:id="@+id/next"
         android:layout_marginLeft="20dp"
-        android:id="@+id/button3"/>
+        android:layout_marginRight="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Newxt activity"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:text="Go back"
+        android:id="@+id/goback"
         android:layout_marginLeft="20dp"
-        android:id="@+id/button4"/>
+        android:layout_marginRight="20dp"/>
 
 </LinearLayout>

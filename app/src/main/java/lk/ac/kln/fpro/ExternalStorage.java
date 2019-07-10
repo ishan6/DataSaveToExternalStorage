@@ -19,6 +19,7 @@ import java.io.InputStreamReader;
 public class ExternalStorage extends AppCompatActivity {
 
     Button save, show, three;
+    String savedText;
     private EditText getText, saveText;
 
     @Override
@@ -32,9 +33,11 @@ public class ExternalStorage extends AppCompatActivity {
         getText = findViewById(R.id.textToGet);
         saveText = findViewById(R.id.textToSave);
 
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (isExternalStoragePresent()) {
                     File file = new File(getExternalFilesDir("MyDir"), "savedText.txt");
 
@@ -43,6 +46,7 @@ public class ExternalStorage extends AppCompatActivity {
                     if (!(saveText.getText().toString().isEmpty())) {
 
                         try {
+
 
                             FileOutputStream fileOutputStream = new FileOutputStream(file);
                             fileOutputStream.write(input.getBytes());
@@ -76,7 +80,7 @@ public class ExternalStorage extends AppCompatActivity {
                     String sLine;
 
                     while ((sLine = bufferedReader.readLine()) != null) {
-                        filecontent = filecontent = sLine;
+                        filecontent = filecontent + sLine;
                     }
 
                     getText.setText(filecontent.toString());

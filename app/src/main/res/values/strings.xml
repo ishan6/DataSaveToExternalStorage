@@ -3,6 +3,8 @@
 
     <string name="internal_storage">Internal Storage</string>
     <string name="external_storage">External Storage</string>
-    <string name="save">save</string>
+    <string name="save">Save</string>
+    <string name="show">Show</string>
+    <string name="Shared_Preference">Shared Preference</string>
 
 </resources>
